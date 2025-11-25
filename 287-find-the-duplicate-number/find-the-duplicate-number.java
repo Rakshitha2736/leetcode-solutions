@@ -3,10 +3,11 @@ class Solution {
         int slow=nums[0];
         int fast=nums[0];
 
-    do{
+    while(true){
         slow=nums[slow];
         fast=nums[nums[fast]];
-           }while(fast!=slow);
+        if(slow==fast) break;
+           }
     
     slow=nums[0];
     while(slow!=fast)
